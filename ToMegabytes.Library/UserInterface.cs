@@ -27,6 +27,7 @@ namespace ToMegabytes
         public UserInterface()
         {
             InitializeComponent();
+            //BackColor = System.Drawing.Color.Blue;
         }
 
         /// <summary>
@@ -74,15 +75,68 @@ namespace ToMegabytes
 
                         cell.Data = new KeyValuePair<double, string>(num, parts[1]);
                         cell.Next = _elements;
+
+                        _elements = cell;
                     }
 
-                    catch (IndexOutOfRangeException)
+                    catch (Exception)
                     {
                         continue;
                     }
 
                 }
             }
+        }
+
+        /// <summary>
+        /// Event handler for the 'Compute' button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void uxCompute_Click(object sender, EventArgs e)
+        {
+            LinkedListCell<KeyValuePair<double, string>> copy = _elements;
+            double sum = 0;
+
+            while(copy != null)
+            {
+                if(copy.Data.Value.Contains("KB"))
+                {
+                    sum += ConvertKilobytes(copy.Data.Key);
+                }
+
+                else if(copy.Data.Value.Contains("GB"))
+                {
+                    sum += ConvertGigabytes(copy.Data.Key);
+                }
+
+                else
+                {
+                    sum += copy.Data.Key;
+                }
+                copy = copy.Next;
+            }
+            uxNumMB.Text = sum.ToString();
+        }
+
+        /// <summary>
+        /// Converts the given kilobytes to megabytes
+        /// </summary>
+        /// <param name="kilo">The number of kilobytes</param>
+        /// <returns>The kilobytes converted to megabytes</returns>
+        private double ConvertKilobytes(double kilo)
+        {
+            return kilo / 1024;
+        }
+
+        /// <summary>
+        /// Converts the given gigabytes to megabytes
+        /// </summary>
+        /// <param name="giga">The number of gigabytes</param>
+        /// <returns>The gigabytes converted to megaytes</returns>
+        private double ConvertGigabytes(double giga)
+        {
+            return giga * 1024;
         }
     }
 }
