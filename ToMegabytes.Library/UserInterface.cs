@@ -27,7 +27,6 @@ namespace ToMegabytes
         public UserInterface()
         {
             InitializeComponent();
-            //BackColor = System.Drawing.Color.Blue;
         }
 
         /// <summary>

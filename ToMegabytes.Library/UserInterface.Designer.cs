@@ -42,6 +42,7 @@
             // 
             // uxMenu
             // 
+            this.uxMenu.BackColor = System.Drawing.Color.PaleTurquoise;
             this.uxMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.uxMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uxFile});
@@ -73,20 +74,21 @@
             // 
             // uxCompute
             // 
+            this.uxCompute.BackColor = System.Drawing.Color.PaleTurquoise;
             this.uxCompute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uxCompute.Location = new System.Drawing.Point(123, 129);
-            this.uxCompute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxCompute.Margin = new System.Windows.Forms.Padding(4);
             this.uxCompute.Name = "uxCompute";
             this.uxCompute.Size = new System.Drawing.Size(496, 63);
             this.uxCompute.TabIndex = 1;
             this.uxCompute.Text = "Compute";
-            this.uxCompute.UseVisualStyleBackColor = true;
+            this.uxCompute.UseVisualStyleBackColor = false;
             this.uxCompute.Click += new System.EventHandler(this.uxCompute_Click);
             // 
             // uxFileName
             // 
             this.uxFileName.Location = new System.Drawing.Point(123, 66);
-            this.uxFileName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxFileName.Margin = new System.Windows.Forms.Padding(4);
             this.uxFileName.Name = "uxFileName";
             this.uxFileName.Size = new System.Drawing.Size(495, 22);
             this.uxFileName.TabIndex = 2;
@@ -95,7 +97,8 @@
             // 
             this.uxFileSelectedLabel.AutoSize = true;
             this.uxFileSelectedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.uxFileSelectedLabel.Location = new System.Drawing.Point(15, 67);
+            this.uxFileSelectedLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.uxFileSelectedLabel.Location = new System.Drawing.Point(13, 66);
             this.uxFileSelectedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uxFileSelectedLabel.Name = "uxFileSelectedLabel";
             this.uxFileSelectedLabel.Size = new System.Drawing.Size(100, 18);
@@ -105,15 +108,16 @@
             // uxNumMB
             // 
             this.uxNumMB.Location = new System.Drawing.Point(475, 263);
-            this.uxNumMB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxNumMB.Margin = new System.Windows.Forms.Padding(4);
             this.uxNumMB.Name = "uxNumMB";
-            this.uxNumMB.Size = new System.Drawing.Size(143, 22);
+            this.uxNumMB.Size = new System.Drawing.Size(167, 22);
             this.uxNumMB.TabIndex = 4;
             // 
             // uxNumMBLabel
             // 
             this.uxNumMBLabel.AutoSize = true;
             this.uxNumMBLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uxNumMBLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.uxNumMBLabel.Location = new System.Drawing.Point(241, 263);
             this.uxNumMBLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.uxNumMBLabel.Name = "uxNumMBLabel";
@@ -125,6 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(743, 350);
             this.Controls.Add(this.uxNumMBLabel);
             this.Controls.Add(this.uxNumMB);
@@ -134,7 +139,7 @@
             this.Controls.Add(this.uxMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.uxMenu;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserInterface";
             this.Text = "ToMegabytes";
             this.uxMenu.ResumeLayout(false);
